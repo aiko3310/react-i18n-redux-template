@@ -2,11 +2,9 @@ import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import { routerReducer, routerMiddleware } from 'react-router-redux';
 import appReducer from '../store/appStore/reducer';
-import langReducer from '../store/langStore/reducer';
 const configureStore = (history, initialState) => {
   const reducers = {
-    app: appReducer,
-    lang: langReducer
+    app: appReducer
   };
   const middleware = [thunk, routerMiddleware(history)];
   // In development, use the browser's Redux dev tools extension if installed

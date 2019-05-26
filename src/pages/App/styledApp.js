@@ -4,10 +4,6 @@ const StyledBackGround = styled.div`
   height: 100vh;
   background: #282c34;
 `;
-const StyledNavBackGround = styled.div`
-  background: #20232a;
-  padding: 1em;
-`;
 const StyledContainer = styled.div`
   max-width: 1140px;
   display: ${props => props.styleDisplay};
@@ -38,7 +34,6 @@ const StyledLink = styled(Link)`
 `;
 export {
   StyledBackGround,
-  StyledNavBackGround,
   StyledContainer,
   StyledLogoImg,
   StyledP,

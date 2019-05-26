@@ -5,7 +5,7 @@ import { createHashHistory } from 'history';
 import configureStore from './configureStore';
 
 import './index.css';
-import Intl from './Intl';
+import RootRouter from './rootRouter';
 import * as serviceWorker from './serviceWorker';
 const initialState = window.initialReduxState;
 const history = createHashHistory();
@@ -13,7 +13,7 @@ const store = configureStore(history, initialState);
 
 const app = (
   <Provider store={store}>
-    <Intl />
+    <RootRouter />
   </Provider>
 );
 ReactDOM.render(app, document.getElementById('root'));
