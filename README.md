@@ -1,5 +1,10 @@
 # React Redux i18n Template
 
+## branch
+
+- master 
+- without i18n
+
 ## Use package
 
 - [plop](https://plopjs.com/)

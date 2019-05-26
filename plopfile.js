@@ -83,6 +83,34 @@ module.exports = function(plop) {
       }
     ] // array of actions
   });
+  plop.setGenerator('store', {
+    description: '創建新的 store',
+    prompts: [
+      {
+        type: 'input',
+        name: 'name',
+        message: '輸入 store 的名稱'
+      }
+    ], // array of inquirer prompts
+    actions: [
+      {
+        type: 'add',
+        path: 'src/store/{{ camelCase name }}/{{ camelCase name }}Action.js',
+        templateFile: 'plop-templates/store/action.hbs'
+      },
+      {
+        type: 'add',
+        path:
+          'src/store/{{ camelCase name }}/{{ camelCase name }}ActionTypes.js',
+        templateFile: 'plop-templates/store/actionTypes.hbs'
+      },
+      {
+        type: 'add',
+        path: 'src/store/{{ camelCase name }}/{{ camelCase name }}Reducer.js',
+        templateFile: 'plop-templates/store/reducer.hbs'
+      }
+    ] // array of actions
+  });
   /* plop.setGenerator('名稱','物件' {
     description: 描述,
     prompts:[{
