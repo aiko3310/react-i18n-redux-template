@@ -1,6 +1,6 @@
 import * as actionTypes from './actionTypes';
 export const actionCreators = {
-  testAction: (value, t) => async dispath => {
+  testAction: value => dispath => {
     dispath({ type: actionTypes.TEST });
   }
 };
